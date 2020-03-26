@@ -1,8 +1,6 @@
 body {
     font-family: 'Quicksand', sans-serif !important;
-    background: url(../img/bg.jpg) no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background:#3B3D3F;
 }
 
 .information {
@@ -10,7 +8,7 @@ body {
     padding: 15px;
     width: 100%;
     align-items: center;
-    box-shadow: -6px 15px 15px #b1b1b1;
+    /*box-shadow: -6px 15px 15px #b1b1b1;*/
 }
 
 .information > .top {
@@ -146,7 +144,7 @@ body {
 }
 
 .page .lead {
-    background: #6b6b6b;
+    background: #3B3D3F;
     color: white;
     padding: 5px 15px;
     display: flex;
