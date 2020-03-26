@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CV's Vu Linh</title>
+</head>
+<body>
+<div class="container main" id="app">
+    <div class="information bg-white border">
+        <div class="top d-flex w-100 p-3">
+            <div class="avatar">
+                <a href="https://www.facebook.com/vulinh007" target="_blank">
+                    <div>
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="details">
+                <p class="name">Vũ Hoàng Lĩnh</p>
+                <p class="job">Web Developer</p>
+            </div>
+        </div>
+        <div class="menu">
+            <button class="trans" v-on:click="setTab('profile')" v-bind:class="{'active': tab === 'profile'}">Profile
+            </button>
+            <button class="trans" v-on:click="setTab('experience')" v-bind:class="{'active': tab === 'experience'}">
+                Experience
+            </button>
+            <button class="trans" v-on:click="setTab('skills')" v-bind:class="{'active': tab === 'skills'}">Skills
+            </button>
+        </div>
+        <div class="page border">
+            <div class="profile" v-bind:class="{'d-none': tab !== 'profile'}">
+                <p class="lead"><i class="fas fa-user"></i>About Me</p>
+                <div class="p-3">
+                    <p class="info"><span class="time">Name</span>Vũ Hoàng Lĩnh</p>
+                    <p class="info"><span class="time">Address</span>Bến Chà Vi, Khu Phố 5, Mỹ Phước, Bến Cát, Bình
+                        Dương ( sẵn sàng chuyển lên TP.HCM để làm việc )</p>
+                    <p class="info"><span class="time">Birthday</span>March 31, 2001</p>
+                    <p class="info"><span class="time">Email</span>vulinhscoris@gmail.com</p>
+                    <p class="info"><span class="time">Phone</span>0971697776</p>
+                    <p class="info mb-0"><span class="time">Github</span><a href="https://github.com/vulinhscoris"
+                                                                            target="_blank">vulinhscoris</a>
+                    </p>
+                </div>
+            </div>
+            <div class="experience" v-bind:class="{'d-none': tab !== 'experience'}">
+                <p class="lead"><i class="fas fa-shield-alt"></i>Experience</p>
+                <div class="p-3">
+                    <p class="line info"><span class="time">2016</span> Bắt đầu học lập trình web ( HTML,CSS,JS,PHP )
+                    </p>
+                    <p class="line info"><span class="time">2017</span> Tạo ra sản phẩm đầu tiên ( <a
+                            href="https://www.youtube.com/watch?v=a5dXCYS2zds" target="_blank">xem</a> )
+                        xây dựng bằng Zend Framework [PHP] </p>
+                    <p class="line info"><span class="time">2018</span> Học Framework Laravel</p>
+                    <p class="line info"><span class="time">2019</span> Tiếp tục học Vue, React, NodeJS, Express JS </p>
+                    <p class="mb-0 line info"><span class="time">09 - 2019</span> Tạo sản phẩm thứ 2 bằng Codeigniter (
+                        <a
+                                href="https://www.youtube.com/watch?v=xY0sPJ4hLic" target="_blank">xem</a> )</p>
+                </div>
+            </div>
+            <div class="skills" v-bind:class="{'d-none': tab !== 'skills'}">
+                <p class="lead"><i class="fas fa-book"></i>Skill Set</p>
+                <div class="p-3">
+                    <p class="font-weight-bold h4 mb-3">Languages</p>
+                    <div class="d-flex skills_">
+                        <div class="skill">
+                            <i class="devicon-html5-plain colored"></i>
+                            <div class="s-name">
+                                HTML 5
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="devicon-css3-plain colored"></i>
+                            <div class="s-name">
+                                CSS 3
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <div class="s-name">
+                                Javascript
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <i class="devicon-php-plain colored"></i>
+                            <div class="s-name">
+                                PHP
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-weight-bold h4 my-3">Frameworks</p>
+                    <div class="d-flex skills_">
+                        <div class="skill">
+                            <i class="devicon-laravel-plain colored"></i>
+                            <div class="s-name">
+                                Laravel
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="devicon-zend-plain colored"></i>
+                            <div class="s-name">
+                                Zend
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="devicon-codeigniter-plain colored"></i>
+                            <div class="s-name">
+                                Codeigniter
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <i class="devicon-express-original colored"></i>
+                            <div class="s-name">
+                                ExpressJS
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="devicon-bootstrap-plain colored"></i>
+                            <div class="s-name">
+                                Bootstrap
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="devicon-vuejs-plain colored"></i>
+                            <div class="s-name">
+                                Vue
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="devicon-react-original colored"></i>
+                            <div class="s-name">
+                                React
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-weight-bold h4 mb-3">Libraries</p>
+                    <div class="d-flex skills_">
+                        <div class="skill">
+                            <i class="devicon-jquery-plain colored"></i>
+                            <div class="s-name">
+                                Jquery
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-weight-bold h4 mb-3">Platforms</p>
+                    <div class="d-flex skills_">
+                        <div class="skill">
+                            <i class="devicon-nodejs-plain colored"></i>
+                            <div class="s-name">
+                                NodeJS
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-weight-bold h4 my-3">Tools & Processors</p>
+                    <div class="d-flex skills_">
+                        <div class="skill">
+                            <i class="devicon-sass-original colored"></i>
+                            <div class="s-name">
+                                Sass
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-weight-bold h4 my-3">Database</p>
+                    <div class="d-flex skills_">
+                        <div class="skill">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <div class="s-name">
+                                MySQL
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <i class="devicon-mongodb-plain colored"></i>
+                            <div class="s-name">
+                                MongoDB
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
